@@ -29,14 +29,14 @@ public class BaseClass {
 
 	}
 
-	@Parameters("browser")
+	
 	@BeforeClass
-	public void classConfig(String browser) {
+	public void classConfig() {
 		pLib = new PropertyLibrary();
 		wLib = new WebDriverLibrary();
 		eLib = new ExcelLibrary();
 		time = Long.parseLong(pLib.fetchDataFromPropertyFile("time"));
-		driver = wLib.lauchBrowser(browser, pLib.fetchDataFromPropertyFile("url"), time);
+		driver = wLib.lauchBrowser(pLib.fetchDataFromPropertyFile("browser"), pLib.fetchDataFromPropertyFile("url"), time);
 
 	}
 
