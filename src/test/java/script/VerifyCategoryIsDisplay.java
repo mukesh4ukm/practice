@@ -13,32 +13,29 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import genericLibrary.BaseClass;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
+@Listeners(genericLibrary.ListenerImplementingClass.class)
 public class VerifyCategoryIsDisplay extends BaseClass {
 
+	
 	@Test
 	public void verifyElementIsPresentOrNot() {
 
-//		WebDriverManager.chromedriver().setup();
-//		WebDriver driver = new ChromeDriver();
-//		driver.get("https://allensolly.abfrl.in/");
-//		driver.manage().window().maximize();
-//		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-
-		try {
+//		try {
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		WebElement ele = (WebElement) js.executeScript(
 				"return document.querySelector(\"#wzrkImageOnlyDiv > ct-web-popup-imageonly\").shadowRoot.querySelector(\"#close\")");
-		WebDriverWait wait = new WebDriverWait(driver, 10);
+		WebDriverWait wait = new WebDriverWait(driver, 20);
 		wait.until(ExpectedConditions.visibilityOf(ele));
 		js.executeScript("arguments[0].click()", ele);
-		}catch(Exception e) {
-			
-		}
+//		}catch(Exception e) {
+//			
+//		}
 
 		List<String> list = new ArrayList<String>();
 		list.add("MEN");

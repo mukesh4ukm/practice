@@ -17,6 +17,7 @@ public class BaseClass {
 	WebDriverLibrary wLib;
 	ExcelLibrary eLib;
 	protected WebDriver driver;
+	static WebDriver sdriver;
 	long time;
 
 	@BeforeSuite
@@ -38,6 +39,7 @@ public class BaseClass {
 		time = Long.parseLong(pLib.fetchDataFromPropertyFile("time"));
 		driver = wLib.lauchBrowser(pLib.fetchDataFromPropertyFile("browser"), pLib.fetchDataFromPropertyFile("url"), time);
 
+		sdriver=driver;
 	}
 
 	@BeforeMethod

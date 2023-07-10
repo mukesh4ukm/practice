@@ -5,7 +5,13 @@
     <classes>
       <class name="script.VerifyCategoryIsDisplay">
         <methods>
+          <include name="tearDownConfig"/>
           <include name="verifyElementIsPresentOrNot"/>
+          <include name="testConfig"/>
+          <include name="tearDownMethod"/>
+          <include name="suiteConfig"/>
+          <include name="classConfig"/>
+          <include name="classTearDown"/>
         </methods>
       </class> <!-- script.VerifyCategoryIsDisplay -->
     </classes>
