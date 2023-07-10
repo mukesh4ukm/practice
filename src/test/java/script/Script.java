@@ -39,6 +39,8 @@ public class Script {
 		WebElement java = driver.findElement(By.xpath("//input[@placeholder=\"Enter Pincode/City/Area\"]/ancestor::div[@class=\"containerGrid\"]/descendant::div[@class=\"StoreLocator_locationContainer__XUTQj null\"]"));
 	    
 		System.out.println(java.getText());
+		
+		System.out.println("hello");
 	
 	}
 
