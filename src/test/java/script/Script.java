@@ -40,7 +40,7 @@ public class Script {
 	    
 		System.out.println(java.getText());
 		
-		System.out.println("hello");
+		
 	
 	}
 
