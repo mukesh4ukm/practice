@@ -7,6 +7,7 @@ public class NewOne {
 		System.out.println("helll hello");
 		
 		System.out.println("hiiiiii");
+		System.out.println("hiii hello");
 	}
 
 }
